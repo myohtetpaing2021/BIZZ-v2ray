@@ -110,7 +110,7 @@ Use the following settings in your client app:
 | Protocol   | VLESS                                  |
 | Address    | `your.domain.com`                      |
 | Port       | `443` (HTTPS)                          |
-| UUID       | `b0286bc2-e17c-4c17-b0e6-d39c93f74937` |
+| UUID       | `fb226b97-8410-41b0-ab28-121d4ab9c7c1` |
 | Encryption | none                                   |
 | Transport  | WebSocket (WS)                         |
 | WS Path    | `/notragnar`                           |
