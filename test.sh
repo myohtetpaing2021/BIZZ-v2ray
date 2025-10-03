@@ -164,7 +164,8 @@ else
 ${LINK}
 \`\`\`
 
-*Usage:* Copy the above link and import to your V2Ray client."
+*Usage:* Copy the above link and import to your V2Ray client
+━━━━━━━━━━━━━━━━━━━━"
 fi
 
 echo -e "$MESSAGE" > deployment-info.txt
