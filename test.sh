@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # =============================
-# grpc.sh — Cloud Run deploy + Telegram push (full)
+# grpc.sh — Cloud Run deploy + Telegram push (final)
 # =============================
 
 # Colors
@@ -126,6 +126,7 @@ TROJAN_WS="trojan://${TROJAN_PASS}@${HOST_DOMAIN}:443?path=${PATH_ENCODED}&secur
 
 if [[ "$PROTO" == "all" ]]; then
   MESSAGE="*Deploy Success* ✅
+*Project:* \`${PROJECT}\`
 *Service:* \`${SERVICE}\`
 *Region:* \`${REGION}\`
 *URL:* \`${SERVICE_URL}\`
@@ -143,14 +144,17 @@ ${VLESS_GRPC}
 *Trojan (WS):*
 \`\`\`
 ${TROJAN_WS}
-\`\`\`"
+\`\`\`
+
+*Usage:* Copy the above links and import to your V2Ray client."
 else
   case "$PROTO" in
     trojan) LABEL="Trojan (WS)"; LINK="$TROJAN_WS";;
     vless) LABEL="VLESS (WS)"; LINK="$VLESS_WS";;
     vlessgrpc) LABEL="VLESS (gRPC)"; LINK="$VLESS_GRPC";;
   esac
-  MESSAGE="*Deploy Success* ✅
+  MESSAGE="*Cloud Run Deploy Success* ✅
+*Project:* \`${PROJECT}\`
 *Service:* \`${SERVICE}\`
 *Region:* \`${REGION}\`
 *URL:* \`${SERVICE_URL}\`
@@ -158,7 +162,9 @@ else
 *${LABEL}:*
 \`\`\`
 ${LINK}
-\`\`\`"
+\`\`\`
+
+*Usage:* Copy the above link and import to your V2Ray client."
 fi
 
 echo -e "$MESSAGE" > deployment-info.txt
