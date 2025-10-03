@@ -66,9 +66,9 @@ REGION="us-central1"
 HOST_DOMAIN="m.googleapis.com"
 
 VLESS_UUID="ba0e3984-ccc9-48a3-8074-b2f507f41ce8"
-VLESSGRPC_UUID="0c890000-4733-b20e-067f-fc341bd20000"
-VLESSGRPC_SVC="n4vpnfree-grpc"
-TROJAN_PASS="Nanda"
+VLESSGRPC_UUID="ba0e3984-ccc9-48a3-8074-b2f507f41ce8"
+VLESSGRPC_SVC="m4kvpnfree-grpc"
+TROJAN_PASS="shayshayblack"
 
 read -rp "Service name [default $SERVICE]: " svc; SERVICE=${svc:-$SERVICE}
 read -rp "Region [default $REGION]: " r; REGION=${r:-$REGION}
